@@ -26,7 +26,7 @@ router.get("/api/cart", (req, res) => {
     // parse cart cookie
     var cart = { products: [] }
     var cartCookie = req.cookies.cart;
-    
+
     // get products from current cart cookie
     if (cartCookie != undefined) {
         try {
@@ -56,7 +56,7 @@ router.post("/api/cart", (req, res) => {
     var cart = { products: [] }
     var cartCookie = req.cookies.cart;
     res.cookie("cart", btoa(JSON.stringify(cart)))
-    
+
     // get products from current cart cookie
     if (cartCookie != undefined) {
         try {
@@ -84,15 +84,22 @@ router.post("/api/cart", (req, res) => {
         return false
     }
 
+    // check for max product qty
+    var limitReached = false
     cart.products.forEach(element => {
         if (element.pid == pid) {
-            response.success = false;
-            response.error = "Max product quantity reached";
-            
-            res.json(response);
-            return false
+            limitReached = true
         }
     })
+
+    if (limitReached) {
+        response.success = false;
+        response.error = "Max product quantity reached";
+
+        res.json(response);
+        return false
+    }
+
 
     // validate challenge
     if (challengeId == undefined) {
