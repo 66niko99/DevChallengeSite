@@ -17,7 +17,7 @@ var products = {
     }
 }
 
-router.get("/index.js", (req, res) => {
+router.get("/obf.index.js", (req, res) => {
     res.sendFile(path.join(__dirname, "/index.js"))
 })
 

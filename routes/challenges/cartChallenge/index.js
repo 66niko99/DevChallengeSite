@@ -1,8 +1,5 @@
 $(document).ready(async function () {
-    // load cart
     await LoadCart()
-
-    // load challenge
     await LoadChallenge()
 
 })
@@ -10,7 +7,6 @@ $(document).ready(async function () {
 async function LoadChallenge() {
     var response = await fetch(document.location + "/api/challenge")
     response.json().then(data => {
-        console.log($("#challenge-input").text())
         $("#challengeId").val(data.challengeId);
         $("#challenge-text").text(data.question);
     })
@@ -21,7 +17,6 @@ async function LoadCart() {
     response.json().then(data => {
         var element = "";
         data.products.forEach(prod => {
-            // render elements
             element += `
                <div class="cart-item">
                    <span class="bold">${prod.name}</span>
@@ -29,7 +24,6 @@ async function LoadCart() {
               </div>`
         })
 
-        console.log(element);
         $("#basket-items").html(element)
     })
 }
@@ -41,8 +35,6 @@ document.getElementById("clear-cart").onclick = async function () {
             location.reload();
         }
     );
-
-
 }
 
 document.getElementById("add-to-cart").onclick = async function () {
