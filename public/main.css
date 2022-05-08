@@ -1,0 +1,41 @@
+* {
+    font-family: sans-serif;
+}
+
+h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0px;
+}
+
+.challenge-info {
+    width: 350px;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.challenge-info > span {
+    margin-top: 3px;
+    display:block;
+}
+
+.challenge-info > a {
+    display: block;
+    color: black;
+}
+
+.larger {
+    font-size: larger;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.top-spacing {
+    margin-top: 8px !important;
+}
