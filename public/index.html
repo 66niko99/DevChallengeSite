@@ -9,33 +9,20 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://niko.homes/" />
     <meta name="theme-color" content="#FFFFFF">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="public/main.css">
     <title>Snkr Dev Challenges</title>
 </head>
 
 <body>
     <h1 style="margin-bottom: 0px;">Snkr Dev Challenges</h1>
-    <span style="margin-bottom: 20px; display: block;">Created by <a href="https://twitter.com/slimdevs" target="_blank">niko#0420</a></span>
+    <span style="margin-bottom: 20px; display: block;">Created by <a href="https://twitter.com/slimdevs"
+            target="_blank">niko#0420</a></span>
 
     <h2>Challenges</h2>
-        <div class="challenge-info">
-            <a href="/challenges/cartChallenge" class="bold larger" target="_blank">Cart Challenge</a>
-            <span>Difficulty: 1/10</span>
-            <span class="bold top-spacing">Challenge Goal</span>
-            <p>
-                The goal of this challenge is to get the item in your cart without solving the challenge. Bonus points if you can bypass the item quantity limit.
-            </p>
-        </div>
-        <div class="challenge-info">
-            <a href="/challenges/queueChallenge" class="bold larger" target="_blank">Queue Challenge</a>
-            <span>Difficulty: 4/10</span>
-            <span class="bold top-spacing">Challenge Goal</span>
-            <p>
-                When you try to add to cart, you'll be put in a queue. Once you've waited in queue, you'll be able to add to cart. The goal of this challenge 
-                is to add the item to your cart without waiting in the queue. 
-            </p>
-        </div>
+    <div id="challenge-container">
+    </div>
 </body>
+<script src="public/index.js"></script>
 
 </html>
