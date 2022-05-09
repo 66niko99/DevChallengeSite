@@ -8,4 +8,6 @@ router.get("/:challenge", (req, res) => {
 
 router.use("/cartChallenge", require("./cartChallenge/api"))
  
+router.use("/queueChallenge", require("./queueChallenge/api"))
+ 
 module.exports = router;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Queue Challenge</title>
+    <style>
+        #add-to-cart {
+            cursor: pointer;
+            margin-top: 14px;
+        }
+
+        #basket {
+            margin-top: 25px;
+            border-top: 1px solid black;
+        }
+
+        span {
+            display: block;
+        }
+
+        #queue-time {
+            color: blue;
+            display: inline;
+        }
+
+        .your-cart {
+            margin-left: 15px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .cart-item {
+            padding: 15px;
+            margin: 15px;
+            border: 1px solid black;
+        }
+
+        .p-img {
+            width: 300px;
+        }
+
+        .cart-item img {
+            display: block;
+            width: 120px;
+        }
+
+        #clear-cart {
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        #cart-error {
+            color: red;
+            margin-top: 16px;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jordan 1</h1>
+    <img class="p-img" src="/public/images/jordan.png" alt="shoe">
+
+
+    <div id="queue-modal">
+        <span class="bold">Your queue time: <span id="queue-time">0</span> seconds</span>
+        <p>Due to high demand, everyone has been given a random spot in line. Once it's your turn, you'll be able to add to cart.</p>
+    </div>
+
+    <input type="hidden" name="pid" id="pid" value="123432333">
+
+    <button id="add-to-cart">Add To Cart</button>
+    <span id="cart-error"></span>
+
+    <div id="basket">
+        <span class="bold your-cart">Your Cart</span>
+        <button id="clear-cart">Clear Cart</button>
+        <div id="basket-items">
+
+        </div>
+    </div>
+</body> 
+
+<script src="queueChallenge/index.js"></script>
+<script src="queueChallenge/queue.obf.js"></script>
+
+</html>
